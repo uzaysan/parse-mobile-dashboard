@@ -167,7 +167,7 @@ const BottomBar = ({state, navigation}) => {
 const styles = StyleSheet.create({
   main: {
     width: '100%',
-    height: 55,
+    height: 52,
     backgroundColor: 'white',
     flexDirection: 'row',
   },
@@ -184,7 +184,7 @@ const styles = StyleSheet.create({
   },
   innerView: {
     alignItems: 'center',
-    marginTop: 2,
+    marginTop: 4,
   },
   text: {
     fontWeight: 'bold',
