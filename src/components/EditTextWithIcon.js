@@ -18,6 +18,7 @@ const EditTextWithIcon = ({
         <TextInput
           style={{...styles.textStyle, ...textStyle}}
           placeholder={placeholder}
+          placeholderTextColor={'#999999'}
           value={value}
           onChangeText={onChangeText}
           multiline={multiline}

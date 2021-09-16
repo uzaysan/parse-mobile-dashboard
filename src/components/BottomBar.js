@@ -2,6 +2,7 @@ import React from 'react';
 import {StyleSheet, TouchableHighlight, Text, View} from 'react-native';
 import Ionicons from 'react-native-vector-icons/dist/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/dist/MaterialCommunityIcons';
+
 const iconSize = 26;
 
 const BottomBar = ({state, navigation}) => {
@@ -144,7 +145,11 @@ const BottomBar = ({state, navigation}) => {
         <View style={styles.touchableChild}>
           <View style={styles.innerView}>
             <Ionicons
-              name={state.index === 4 ? 'cloud-upload' : 'cloud-upload-outline'}
+              name={
+                state.index === 4
+                  ? 'ios-chevron-up-circle'
+                  : 'ios-chevron-up-circle-outline'
+              }
               size={iconSize}
               color="black"
             />
@@ -154,7 +159,7 @@ const BottomBar = ({state, navigation}) => {
                   ? styles.text
                   : {...styles.text, fontWeight: 'normal'}
               }>
-              Api
+              Other
             </Text>
           </View>
           {state.index === 4 && <View style={styles.topLine} />}

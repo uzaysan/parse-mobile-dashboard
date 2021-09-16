@@ -14,7 +14,7 @@ export default request = {
     });
     return await response.json();
   },
-  GET: async (endpoint, body, headers) => {
+  GET: async (endpoint, headers) => {
     const response = await fetch(`${Config.serverUrl}/${endpoint}`, {
       method: 'GET',
       headers: {
@@ -24,7 +24,6 @@ export default request = {
         ...headers,
       },
     });
-    console.log('Response', response);
     return await response.json();
   },
 };

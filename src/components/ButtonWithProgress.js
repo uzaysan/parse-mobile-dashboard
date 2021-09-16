@@ -7,13 +7,14 @@ import {
   ActivityIndicator,
 } from 'react-native';
 
-const ButtonWithprogress = ({
+const ButtonWithProgress = ({
   isLoading,
   onPress,
   style,
   underlayColor,
   buttonText,
   progressColor,
+  buttonTextStyle,
 }) => {
   return (
     <TouchableHighlight
@@ -21,7 +22,11 @@ const ButtonWithprogress = ({
       underlayColor={underlayColor || '#EEEEEE'}
       style={{...styles.main, ...style}}>
       <View style={styles.innerView}>
-        {!isLoading && <Text>{buttonText}</Text>}
+        {!isLoading && (
+          <Text style={{...styles.buttonText, ...buttonTextStyle}}>
+            {buttonText}
+          </Text>
+        )}
         {isLoading && (
           <ActivityIndicator size={30} color={progressColor || 'black'} />
         )}
@@ -42,6 +47,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  buttonText: {
+    fontWeight: 'bold',
+  },
 });
 
-export default ButtonWithprogress;
+export default ButtonWithProgress;
